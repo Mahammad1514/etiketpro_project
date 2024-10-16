@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block main %}
+<div class="product-banner">
+    <h2style="color:black">Product</h2>
+</div>
+<section id="products-section">  
+    <div class="products">
+        {% for product in products %}
+        <div class="product">
+            <img src="{{ product.images.first.image.url }}" alt="{{ product.title }}">
+            <h3>{{ product.title }}</h3>
+            <p>{{ product.price }}</p>
+            <a href="{% url 'shop:product-detail' product.pk %}">View Details</a>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock main %}
+
+ 
+    

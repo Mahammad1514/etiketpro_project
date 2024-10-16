@@ -1,0 +1,76 @@
+{% extends "layout.html" %}
+{% load static %}   
+
+{% block main %}
+
+<div class="product-banner" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnaO4KlysHI3zbBvsdYfZcKiDTTYQbeeLJiUCixiy3pAB6vaSyQIiJoeUSKxzs7boEEJI&usqp=CAU')">
+    <h2 style="color:black">Contact</h2>    
+  </div>
+<section class="container contact-section">
+    <div class="contact-header">
+        <h1>Bizimlə əlaqə saxla</h1>
+        <p class="contact-text-black">Bizimlə rahatlıqla əlaqəyə keçə bilərsiniz</p>
+        <p class="contact-text-gray">Bizimlə sosial media hesablarımız, poçt ünvanımız və çağrı mərkəzimiz üzərindən
+            əlaqə saxlaya bilərsiniz.
+        </p>
+    </div>
+    <div class="contact-form">
+        <form method="post" action="{% url 'info:confirm-contact' %}" >
+            {% csrf_token %}    
+            <div class="input-contact">
+                <input type="text" id="name" name="name" placeholder="Name">
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="input-contact">
+                <input type="email" id="email" name="email" placeholder="Email">
+                <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="input-contact">
+                <input type="tel" id="phone" name="phone" placeholder="Phone">
+            </div>
+            <div class="input-contact">
+                <label for="message">
+                    <textarea id="message" name="message" placeholder="Message"></textarea>
+                </label>
+            </div>
+            <button type="submit">Submit</button>  
+        </form>
+    </div>
+</section>
+<div class="container">
+    <div class="contact-border"></div>
+</div>
+<section class="container contact-mobil">
+    <div class="contact">
+        <h4>Bizimlə Əlaqə</h4>
+        <p>
+            <i class="fa-solid fa-phone"></i>
+            +994 50 212 13 99
+        </p>
+        <p><i class="fa-solid fa-envelope"></i><a href="mailto:office@tuna.az">office@tuna.az</a></p>
+    </div>
+    <div class="address">
+        <h4>Ünvan</h4>
+        <p><i class="fa-solid fa-location-dot"></i> Bakı şəh., Keşlə qəs., 1-ci Öünə küçəsi 19</p>
+    </div>
+    <div class="watsapp">
+        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
+</section>
+<section class="contat-map">
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d24308.340779751663!2d49.87345474481519!3d40.396829064698984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1zQmFrxLEgxZ_JmWguLCBLZcWfbMmZIHHJmXMuMS1jaSDDtm7DvG7JmSBrw7zDp8mZc2kgMTk!5e0!3m2!1saz!2saz!4v1716934058864!5m2!1saz!2saz"
+        width="90%" height="500" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+</section>
+
+{% endblock main %}
+
+
+
+
+
+
+
+
+ 

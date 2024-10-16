@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block main %}   
+
+<div class="product-banner" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnaO4KlysHI3zbBvsdYfZcKiDTTYQbeeLJiUCixiy3pAB6vaSyQIiJoeUSKxzs7boEEJI&usqp=CAU')">
+    <h2 style="color:black">About</h2>   
+  </div>
+<section id="about-etiket">
+    <div class="container">
+        <div class="about-etiket">
+            <h4>Etiket.pro</h4>
+            <p>
+                <span>Tuna Printing & Publishing & Packaging Company ( “TUNA” şirkəti)</span>
+                18 iyun 1998-ci ildə
+                qurulmuşdur.
+                Şirkət hazırda kağız, qablaşdırma və plastik istehsalı sahəsində Azərbaycanın qabaqcıl
+                müəssisələrindən biridir.
+            </p>
+        </div>
+        <div class="about-img-one">
+            <img src="{% static '/images/image 17.png' %}" alt="">
+        </div>
+        <div class="about-img-two">
+            <img src="{% static '/images/image 19.png' %}" alt="">
+        </div>
+        <div class="about-text">
+            <p>
+                Qısa müddət ərzində əldə etdiyi nailiyyətlərə, göstərdiyi xidmətlərin keyfiyyətinə və
+                sifarişçilərinin yüksək məmnunluğunu qazanmasına görə Azərbaycanın qabaqcıl firma və təşkilatları
+                arasında layiqli yer tutmuş “TUNA” şirkəti bu sektorda Coca-cola , Azərsun, Mc Donalds, Fab Boya,
+                Best Boya, Sobsan, Bolluq, Milenium, AER, Şirin, Veysəloğlu və başqa lider şirkətlərlə uzun illərdir
+                əməkdaşlıq edir.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section id="about-slider">
+    <div class="container">
+        <div class="about-title">
+            <h2>Sertifikatlarımız</h2>
+            <span></span>
+        </div>
+        <div class="swiper about-mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="{% static '/images/image_48.png' %}" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="{% static '/images/image_50.png' %}" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="{% static '/images/certificate-31.jpg' %}" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="{% static '/images/certificate-31.jpg' %}" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="{% static '/images/image_50.png' %}" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="{% static '/images/image_51.png' %}" alt="">
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+
+        </div>
+
+</section>
+
+{% endblock main %}
+
+
+
+
+
+

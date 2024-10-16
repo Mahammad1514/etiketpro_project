@@ -1,0 +1,151 @@
+{% load static %} 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="{% static '/styles/style.css' %}"> 
+    {% comment %} <title>Layout</title> {% endcomment %}
+</head>
+
+<body>
+    <header>
+        <div class="container wrapper">
+            <div class="logo">
+                <img src="{% static '/images/logo.png' %}" alt="Etiket.pro ">
+            </div>
+            <div class="navbar">
+                <ul id="menu">
+                    <li><a href="{% url 'shop:index' %}">Home</a></li>
+                    <li><a href="{% url 'info:about' %}">About</a></li>
+                    <li><a href="{% url 'shop:products' %}">Product</a></li> 
+                    <li><a href="{% url 'info:contact' %}">Contact</a></li>
+                    {% comment %} <li><a href="{% url 'shop:detail' %}">Detail</a></li>     {% endcomment %}
+                    {% if request.user.is_authenticated %}   
+                    <li><a href="{% url 'customer:login' %}">Login</a></li>    
+                    {% endif %}
+                    <li><a href="{% url 'customer:logout' %}">Logout</a></li> 
+                    <li><a href="{% url 'customer:register' %}">Register</a></li>    
+                </ul>
+            </div>
+            <nav>
+                <div id="responsive-menu">
+                    <div class="container open-menu">
+                        <div class="open-menu-logo">
+                            <img src="{% static '/images/logo.png' %}" alt="Etiket.pro ">
+                        </div>
+                        <span id="menu-close">
+                            <i class="fa-solid fa-x"></i>
+                        </span>
+                        <ul>
+                            <li><a href="{% url 'shop:index' %}">Home</a></li>
+                            <hr>
+                            <li><a href="{% url 'info:about' %}">About</a></li>
+                            <hr>
+                            <li><a href="{% url 'shop:products' %}">Product</a></li>
+                            <hr>
+                            <li><a href="{% url 'info:contact' %}">Contact</a></li>
+                            <hr>
+                            {% comment %} <li><a href="{% url 'shop:detail' %}">Detail</a></li> {% endcomment %}
+                            <hr>
+                            {% if request.user.is_authenticated %}  
+                            <li><a href="{% url 'customer:login' %}">Login</a></li>
+                            <hr>
+                            {% endif %}
+                            <li><a href="{% url 'customer:logout' %}">Logout</a></li> 
+                            <hr>
+                            <li><a href="{% url 'customer:register' %}">Register</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="menu-icon" id="menu-icon">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+{% block main %}
+{% endblock main %}   
+
+    <footer>
+        <div class="container">
+            <div class="footer-bottom">
+                <div class="footer-left">
+                    <div class="logo">
+                        <div class="logo-img">
+                            <img src="{% static '/images/logo.png' %}" alt="Etiket.pro ">
+                            <p>Düşüncələrinizi kağıza dönüştürürük</p>
+                        </div>
+                    </div>
+                    <div class="links">
+                        <h4 onclick="toggleList('linkList')">Linklər
+                            <i class="fa-solid fa-angle-down"></i>
+                        </h4>
+                        <div id="linkList" class="dropdown-footer">
+                            <ul>
+                                <li><a href="{% url 'shop:index' %}">Home</a></li>
+                                <li><a href="{% url 'info:about' %}">About</a></li>
+                                <li><a href="{% url 'shop:products' %}">Product</a></li> 
+                                <li><a href="{% url 'info:contact' %}">Contact</a></li>
+                                {% comment %} <li><a href="{% url 'shop:detail' %}">Detail</a></li>    {% endcomment %}
+                                {% if request.user.is_authenticated %}   
+                                <li><a href="{% url 'customer:logout' %}">Logout</a></li> 
+                                {% else %}
+                                <li><a href="{% url 'customer:login' %}">Login</a></li>    
+                                <li><a href="{% url 'customer:register' %}">Register</a></li>  
+                                {% endif %}              
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-right">
+                    <div class="contact">
+                        <h4 onclick="toggleList('contactList')">Bizimlə Əlaqə
+                            <i class="fa-solid fa-angle-down"></i>
+                        </h4>
+                        <div id="contactList" class="dropdown-footer">
+                            <p>
+                                <i class="fa-solid fa-phone"></i>
+                                +994 50 212 13 99
+                            </p>
+                            <p><i class="fa-solid fa-envelope"></i><a href="mailto:office@tuna.az">office@tuna.az</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="address">
+                        <h4 onclick="toggleList('addresList')">Ünvan
+                            <i class="fa-solid fa-angle-down"></i>
+                        </h4>
+                        <div id="addresList" class="dropdown-footer">
+                            <p><i class="fa-solid fa-location-dot"></i> Bakı şəh., Keşlə qəs., 1-ci Öünə küçəsi 19</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-copy">
+                <p>&copy; 2024 All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="{% static '/scripts/sliders.js' %}"></script>
+    <script src="{% static '/scripts/main.js' %}"></script>    
+
+</body>
+
+</html>

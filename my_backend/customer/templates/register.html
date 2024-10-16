@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block main %}
+
+<div class="container">
+    <div class="product-banner" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnaO4KlysHI3zbBvsdYfZcKiDTTYQbeeLJiUCixiy3pAB6vaSyQIiJoeUSKxzs7boEEJI&usqp=CAU')">
+        <h2 style="color:black">Registration</h2>   
+      </div>
+      <div style="align-items:center">
+        <form method="POST"> 
+            {% csrf_token %}
+            {{form.as_div}}
+            <input type="submit">
+         </form>
+      </div>
+   
+</div>
+{% endblock main %}

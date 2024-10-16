@@ -1,0 +1,254 @@
+{% extends "layout.html" %}
+{% load static %} 
+
+
+{% block main %}
+
+<section id="banner-slider">
+    <div class="swiper bannerMySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="{% static '/images/banner1.png' %}" alt="">
+                <p>Düşüncələrinizi kağıza dönüşdürürük. </p>
+            </div>
+            <div class="swiper-slide">
+                <img src="{% static '/images/banner1.png' %}" alt="">
+                <p>Düşüncələrinizi kağıza dönüşdürürük. </p>
+            </div>
+            <div class="swiper-slide">
+                <img src="{% static '/images/banner1.png' %}" alt="">
+                <p>Düşüncələrinizi kağıza dönüşdürürük. </p>
+            </div>
+            <div class="swiper-slide">
+                <img src="{% static '/images/banner1.png' %}" alt="">
+                <p>Düşüncələrinizi kağıza dönüşdürürük. </p>
+            </div>
+
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</section>
+
+<section id="home-drink">
+    <div class="drink-img">
+        <img src="{% static '/images/image 13.png' %}" alt="Tuna">
+    </div>
+    <div class="drink-text">
+        <h2>Haqqımızda</h2>
+        <p>
+            <span>Tuna Printing & Publishing & Packaging Company ( “TUNA” şirkəti)</span>
+            18 iyun 1998-ci ildə qurulmuşdur. Şirkət hazırda kağız, qablaşdırma və plastik istehsalı sahəsində
+            Azərbaycanın qabaqcıl müəssisələrindən biridir. Qısa müddət ərzində əldə etdiyi nailiyyətlərə,
+            göstərdiyi xidmətlərin keyfiyyətinə və sifarişçilərinin yüksək məmnunluğunu qazanmasına görə
+            Azərbaycanın qabaqcıl firma və təşkilatları arasında layiqli yer tutmuş “TUNA” şirkəti bu sektorda
+            Coca-cola , Azərsun, Mc Donalds, Fab Boya, Best Boya, Sobsan, Bolluq, Milenium, AER, Şirin,
+            Veysəloğlu və başqa lider şirkətlərlə uzun illərdir əməkdaşlıq edir.
+        </p>
+    </div>
+</section>
+
+<section id="product-slider">
+    <div class="product-title">
+        <h2 class="line-text">Məhsullarımız</h2>
+    </div>
+    
+    <div class="swiper product-mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="{% static '/images/card 1.png' %}" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="{% static '/images/card 2.png' %}" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="{% static '/images/card 1.png' %}" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="{% static '/images/card 3.png' %}" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="{% static '/images/card 3.png' %}" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="{% static '/images/card 2.png' %}" alt="">
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+
+
+
+    </div>
+</section>
+
+
+<section id="chosen-slider">
+    <div class="chosen-title">
+        <h2 class="line-text">Seçilmiş layihələrimiz</h2>
+    </div>
+    <div class="swiper chosen-mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="{% static '/images/chosen1.png' %}" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="{% static '/images/chosen2.png' %}" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="{% static '/images/chosen5.png' %}" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="{% static '/images/chosen4.png' %}" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="{% static '/images/chosen3.png' %}" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="{% static '/images/chosen3.png' %}" alt="">
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+
+
+
+    </div>
+</section>
+
+<section id="video-slider">
+    <div class="video-text">
+        <h2>Featured reels</h2>
+    </div>
+    <div class="swiper video-mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="video-container">
+                    <video width="320" height="240" id="myVideo" preload="metadata">
+                        <source src="{% static '/images/video.mov' %}" type="video/mp4" />
+                    </video>
+                    <div class="play-pause-btn" id="play-pause-btn">
+                        <i class="fa-solid fa-play"></i>
+                        <i class="fa-solid fa-pause"></i>
+                    </div>
+                </div>
+
+            </div>
+            <div class="swiper-slide">
+                <div class="video-container">
+                    <video width="320" height="240" id="myVideo" preload="metadata">
+                        <source src="{% static '/images/video.mov' %}" type="video/mp4" />
+                    </video>
+                    <div class="play-pause-btn" id="play-pause-btn">
+                        <i class="fa-solid fa-play"></i>
+                        <i class="fa-solid fa-pause"></i>
+                    </div>
+                </div>
+
+            </div>
+            <div class="swiper-slide">
+                <div class="video-container">
+                    <video width="320" height="240" id="myVideo" preload="metadata">
+                        <source src="{% static '/images/video.mov' %}" type="video/mp4" />
+                    </video>
+                    <div class="play-pause-btn" id="play-pause-btn">
+                        <i class="fa-solid fa-play"></i>
+                        <i class="fa-solid fa-pause"></i>
+                    </div>
+                </div>
+
+            </div>
+            <div class="swiper-slide">
+                <div class="video-container">
+                    <video width="320" height="240" id="myVideo" preload="metadata">
+                        <source src="{% static '/images/video.mov' %}" type="video/mp4" />
+                    </video>
+                    <div class="play-pause-btn" id="play-pause-btn">
+                        <i class="fa-solid fa-play"></i>
+                        <i class="fa-solid fa-pause"></i>
+                    </div>
+                </div>
+
+            </div>
+            <div class="swiper-slide">
+                <div class="video-container">
+                    <video width="320" height="240" id="myVideo" preload="metadata">
+                        <source src="{% static '/images/video.mov' %}" type="video/mp4" />
+                    </video>
+                    <div class="play-pause-btn" id="play-pause-btn">
+                        <i class="fa-solid fa-play"></i>
+                        <i class="fa-solid fa-pause"></i>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<section id="partners" class="customcontainer">
+    <div class="heading">Tərəfdaşlarımız</div>
+
+    <div class="swiper partners-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="{% static 'images/logo1.png' %}" alt="">
+
+            </div>
+
+            <div class="swiper-slide">
+                <img src="{% static 'images/logo2.png' %}" alt=""> 
+
+            </div>
+            <div class="swiper-slide">
+                <img src="{% static 'images/logo3.png' %}" alt="">
+
+            </div>
+            <div class="swiper-slide">
+                <img src="{% static 'images/logo4.png' %}" alt="">
+
+            </div>
+            <div class="swiper-slide">
+                <img src="{% static 'images/logo5.png' %}" alt="">
+
+            </div>
+            <div class="swiper-slide">
+                <img src="{% static 'images/logo6.png' %}" alt="">
+
+            </div>
+            <div class="swiper-slide">
+                <img src="{% static 'images/logo7.png' %}" alt="">
+
+            </div>
+        </div>
+
+
+    </div>
+</section>
+
+
+<section id="count-section" style="background-image: url('https://marketplace.canva.com/EAFLMici2uA/1/0/1600w/canva-pink-yellow-futuristic-minimal-positive-quote-desktop-wallpaper-0xMXBqiA08w.jpg')">
+    <div class="background-image"></div>
+    <div class="content">
+        <h2>Həyata keçirdiyimiz layihələr və statistikamız</h2>
+        <div class="statistika">
+            <div class="stat-item">
+                <span class="count" data-count="100">0</span>
+                <p>Komanda üzvü</p>
+            </div>
+            <div class="stat-item">
+                <span class="count" data-count="20">0</span>
+                <p>İl təcrübə</p>
+            </div>
+            <div class="stat-item">
+                <span class="count" data-count="100">0</span>
+                <p>Layihə</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock main %}
+
+  
+
+ 
